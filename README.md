@@ -1,13 +1,14 @@
-# TemplatePythonProject
+# TemplateFastAPIProject
 
-This repository holds code for the `TemplatePythonProject`.
+This repository holds code for the `TemplateFastAPIProject`.
+It comes with a working health check API as a minimal web server.
 
 ## Development
 
 ### Clone the repo
 
 ```
-git clone https://github.com/court-room/TemplatePythonProject.git
+git clone https://github.com/court-room/TemplateFastAPIProject.git
 ```
 
 ### Install dependencies
@@ -41,4 +42,10 @@ poetry run mypy
 
 ```
 poetry run pytest
+```
+
+### Run server
+
+```
+poetry run fastapi dev --app app --host 0.0.0.0 --port 8000
 ```
