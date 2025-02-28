@@ -44,6 +44,12 @@ poetry run mypy
 poetry run pytest
 ```
 
+### Set environment variables
+
+```
+export $(cat .env | xargs)
+```
+
 ### Run server
 
 ```

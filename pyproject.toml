@@ -8,16 +8,15 @@ packages = [{include = "template_fastapi_project", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.12"
-fastapi = {version = "0.115.8", extras = ["standard"]}
-fastapi-healthcheck = "0.2.13"
+fastapi = {extras = ["standard"], version = "^0.115.8"}
+pydantic-settings = "^2.8.0"
 
 [tool.poetry.group.dev.dependencies]
-ruff = "0.9.7"
-mypy = {extras = ["reports"], version = "1.15.0"}
-pytest = "8.3.4"
-pytest-cov = "6.0.0"
-pytest-mock = "3.14.0"
-pytest-asyncio = "0.25.3"
+ruff = "^0.9.7"
+mypy = "^1.15.0"
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+lxml = "^5.3.1"
 
 [tool.ruff]
 include = ["*.py"]
@@ -59,7 +58,7 @@ console_output_style = "progress"
 required_plugins = "pytest-cov pytest-mock pytest-asyncio"
 tmp_path_retention_policy = "none"
 testpaths = ["tests"]
-asyncio_default_fixture_loop_scope = "function"
+# asyncio_default_fixture_loop_scope = "function"
 
 [build-system]
 requires = ["poetry-core"]
